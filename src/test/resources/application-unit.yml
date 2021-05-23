@@ -1,0 +1,33 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://tanmaytwr01:TanmayTiwari@cluster0.0ecgx.mongodb.net/test
+      database: CatererTest
+  kafka:
+     consumer:
+        bootstrap-servers: localhost:9092
+        group-id: group_id
+        auto-offset-reset: earliest
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+     producer:
+        bootstrap-servers: localhost:9092
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+logging:
+  level:
+    org:
+      springframework: INFO
+    com:
+      Ahmad:
+        Caterer: INFO
+  pattern:
+    console: "%d{yyyy-MMM-dd HH:mm:ss} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %n"
+    file: "%d{yyyy-MMM-dd HH:mm:ss} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %n"
+  file:
+    name: C:/tmp/applicationtest.log
+
+
+      
+    
